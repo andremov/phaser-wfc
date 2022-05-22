@@ -2,22 +2,11 @@
   "name": "phaser-wfc",
   "version": "1.0.0",
   "description": "Wave function collapse in PhaserJs running on Node.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec http-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andremov/phaser-wfc.git"
-  },
-  "author": "Andres Movilla",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andremov/phaser-wfc/issues"
-  },
-  "homepage": "https://github.com/andremov/phaser-wfc#readme",
   "dependencies": {
     "http-server": "^14.1.0",
-    "phaser": "^3.55.2"
+    "nodemon": "^2.0.16"
   }
 }
