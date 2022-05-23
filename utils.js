@@ -1,7 +1,9 @@
-
-export const deepEqual = (object, filter) => typeof filter === "object"? Object.keys(filter).map(field => {
-    return deepEqual(object[field], filter[field])
-}).reduce((a,b) => a && b, true) : object === filter
+export const deepEqual = (object, filter) => Array.isArray(filter) ?
+    filter.includes(object) : typeof filter !== "object" ?
+        object === filter :
+        Object.keys(filter).map(field => {
+            return deepEqual(object[field], filter[field])
+        }).reduce((a, b) => a && b, true)
 
 export const idToTile = (id, width) => ({
     x: (id % width),
